@@ -50,8 +50,8 @@ Clark eventually completes his purchase. As part of the purchase funnel, he crea
    *  The alias request contains four key pieces of information:
       * A source (anonymous) user profile
       * A destination (known) user profile
-      * A start date (optional) - defaults to the maximum allowed time (Aliased events are copied from the aliasing event to 90 days previously via a global configuration)
-      * An end date (optional) - defaults to now
+      * A start date (mandatory) - defaults to the maximum allowed time (Aliased events are copied from the aliasing event to 90 days previously via a global configuration). Uses UNIX epoch time as the format. e.g: 1624374673789
+      * An end date (mandatory) - defaults to now
    * If the alias request meets [validation requirements](#source-and-destination-profile-requirements), it will be processed after 24 hours. This delay allows for any late-arriving events from the source profile to be included.
 
 ## Results of a successful Alias Request
